@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Work</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'automation/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Automation Work</h1>
+        </header>
+        
+        <main class="main-content">
+            <div class="button-grid">
+                <!-- Left Column -->
+                <div class="button-column">
+                    <button class="menu-button" data-action="inventory">
+                        <span class="icon">📁</span>
+                        <span class="label">Inventory</span>
+                    </button>
+                    <button class="menu-button" data-action="products">
+                        <span class="icon">🔷</span>
+                        <span class="label">Products</span>
+                        <span class="dropdown-indicator">▼</span>
+                    </button>
+                    <button class="menu-button" data-action="logout">
+                        <span class="icon">→</span>
+                        <span class="label">Logout</span>
+                    </button>
+                </div>
+                
+                <!-- Middle Column -->
+                <div class="button-column">
+                    <button class="menu-button" data-action="vendors">
+                        <span class="icon">🏪</span>
+                        <span class="label">Vendors</span>
+                    </button>
+                    <button class="menu-button" data-action="customers">
+                        <span class="icon">👥</span>
+                        <span class="label">Customers</span>
+                    </button>
+                    <button class="menu-button login-button" id="loginBtn" data-action="login">
+                        <span class="icon">→</span>
+                        <span class="label">Login</span>
+                    </button>
+                    <button class="menu-button" data-action="settings">
+                        <span class="icon">⚙️</span>
+                        <span class="label">Settings</span>
+                    </button>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="button-column">
+                    <button class="menu-button" data-action="dashboard">
+                        <span class="icon">⊞</span>
+                        <span class="label">Dashboard</span>
+                    </button>
+                    <button class="menu-button" data-action="invoice">
+                        <span class="icon">📄</span>
+                        <span class="label">Invoice</span>
+                    </button>
+                    <button class="menu-button" data-action="billing">
+                        <span class="icon">💳</span>
+                        <span class="label">Billing</span>
+                    </button>
+                    <button class="menu-button" data-action="purchase">
+                        <span class="icon">🛒</span>
+                        <span class="label">Purchase</span>
+                    </button>
+                    <button class="menu-button" data-action="payments">
+                        <span class="icon">💰</span>
+                        <span class="label">Payments</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="loading-spinner"></div>
+            <p>Processing login automation...</p>
+        </div>
+        
+        <!-- Message Toast -->
+        <div id="messageToast" class="toast hidden">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+    
+    <script src="{% static 'automation/js/main.js' %}"></script>
+</body>
+</html>
